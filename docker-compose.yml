@@ -54,7 +54,7 @@ services:
       - mysql
       - repo-cloner
     env_file:
-      - .env
+      - ./backend/.env
     command: >
       sh -c "
       npm install &&
@@ -69,10 +69,10 @@ services:
     container_name: rps-mysql
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: rps
-      MYSQL_USER: rps
-      MYSQL_PASSWORD: rps
+      MYSQL_ROOT_PASSWORD: 
+      MYSQL_DATABASE: rps_game
+      MYSQL_USER: root
+      MYSQL_PASSWORD: 
     volumes:
       - mysql-data:/var/lib/mysql
     ports:
